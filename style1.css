@@ -1,0 +1,289 @@
+/* Contact Us Page */
+.contact-us {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.contact-us h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.contact-us form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-us form label {
+    font-size: 1.2em;
+    color: #555;
+    text-align: left;
+}
+
+.contact-us form input, 
+.contact-us form textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.contact-us form button {
+    padding: 10px 20px;
+    background-color: #693EFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us form button:hover {
+    background-color: #2ccc44;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    position: relative;
+    width: 95%;
+}
+
+header .logo {
+    font-weight: 800;
+    font-size: 1.5em;
+    margin-left: 20px; /* Margin to the left of the logo */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+}
+
+header .dropdown-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden for larger screens */
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    background: #7d7d7d;
+    min-height: 100px; /* Reduced height */
+    padding: 20px 0;  /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+footer .social-icon, 
+footer .menu {
+    display: flex;
+    gap: 15px; /* Less space between icons and links */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Reduced bottom margin */
+}
+
+footer .social-icon li, 
+footer .menu li {
+    list-style: none;
+}
+
+footer .social-icon li a {
+    font-size: 1.5em;  /* Smaller icons */
+    margin: 0 8px;
+    display: inline-block;
+    transition: 0.3s;  /* Faster animation */
+}
+
+footer .social-icon li a:hover {
+    transform: translateY(3px);  /* Less hover effect */
+}
+
+footer .menu li a {
+    font-size: 1em;  /* Reduced font size */
+    margin: 0 8px;  /* Reduced space between links */
+    text-decoration: none;
+    color: #eee;
+    opacity: 0.75;
+    transition: opacity 0.3s;
+}
+
+footer .menu li a:hover {
+    opacity: 1;
+    transform: translateY(-1px);  /* Slight hover effect */
+}
+
+footer p {
+    text-align: center;
+    margin-top: 10px;  /* Reduced margin */
+    font-size: 0.9em;  /* Smaller font size */
+    color: #fff;
+}
+
+footer .wave {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: url(images/greyscale\ wave.png);
+    background-size: 1000px 50px;
+    
+}
+
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 6px;
+    animation: animateWave-02 4s linear infinite;
+}
+
+footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 10px;
+    animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 6px;
+    animation: animateWave-02 3s linear infinite;
+}
+
+@keyframes animateWave {
+    0% {
+        background-position: 1000px;
+    }
+    100% {
+        background-position: 0px;
+    }
+}
+
+@keyframes animateWave-02 {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: 1000px;
+    }
+}
+
+/* Responsive for Mobile */
+@media (max-width: 600px) {
+    .contact-us h1 {
+        font-size: 1.8em;
+    }
+
+    .contact-us form {
+        width: 90%;
+    }
+}
+
+/* Cards for Events */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px auto;
+    padding-bottom: 100px;
+    z-index: 100; /* Ensure event cards are above the waves */
+    position: relative;
+}
+
+.card {
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card .content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card .content h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.card .content p {
+    font-size: 1em;
+    color: #555;
+}
+
+.card .content a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #693EFF;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.card .content a:hover {
+    background-color: #4A2CCC;
+}
+
+/* Responsive for cards */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
